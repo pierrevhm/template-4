@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Drive Academy | Standard de Conduite Suisse</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandRed: '#FF0000',
+            brandBlack: '#000000',
+            brandWhite: '#FFFFFF',
+          },
+          fontFamily: {
+            sans: ['Inter', 'Helvetica Neue', 'Arial', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <style data-purpose="global-layout">
+    body { background-color: #FFFFFF; color: #000000; -webkit-font-smoothing: antialiased; }
+    .swiss-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1rem; }
+    .black-and-white-img { filter: grayscale(100%) contrast(110%); transition: filter 0.3s ease; }
+    .black-and-white-img:hover { filter: grayscale(0%); }
+    * { border-radius: 0 !important; }
+    h1, h2, h3 { text-transform: uppercase; letter-spacing: -0.05em; line-height: 0.9; }
+    .accent-dot::after { content: '.'; color: #FF0000; }
+  </style>
+</head>
+<body class="font-sans">
+
+<nav class="border-b-2 border-brandBlack sticky top-0 bg-brandWhite/95 backdrop-blur-sm z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="font-black text-2xl tracking-tighter">
+      DRIVE ACADEMY<span class="text-brandRed">_</span>
+    </div>
+    <div class="hidden md:flex space-x-12 font-bold text-sm tracking-widest uppercase">
+      <a class="hover:text-brandRed transition-colors" href="#vehicules">La Flotte</a>
+      <a class="hover:text-brandRed transition-colors" href="#equipe">Équipe</a>
+      <a class="hover:text-brandRed transition-colors" href="#tech">Suivi</a>
+      <a class="hover:text-brandRed transition-colors" href="#offres">Tarifs</a>
+    </div>
+  </div>
+</nav>
+
+<header class="relative border-b-2 border-brandBlack overflow-hidden">
+  <img alt="Vue au volant" class="absolute inset-0 w-full h-full object-cover grayscale opacity-40 object-center" src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=2000" />
+  
+  <div class="absolute inset-0 bg-brandWhite/70"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 py-24 md:py-40">
+    <div class="swiss-grid">
+      <div class="col-span-12 md:col-span-10">
+        <h1 class="text-6xl md:text-9xl font-black mb-8 leading-none mix-blend-multiply">
+          L'APPRENTISSAGE<br/>SANS COMPROMIS<span class="text-brandRed">.</span>
+        </h1>
+        <p class="text-xl md:text-2xl font-normal max-w-2xl border-l-4 border-brandRed pl-6">
+          Rigueur helvétique, moniteurs certifiés et véhicules premium. Nous transformons chaque leçon en un standard d'excellence routière.
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="py-24" id="vehicules">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row justify-between items-baseline mb-16">
+      <h2 class="text-4xl md:text-6xl font-black accent-dot">La Flotte</h2>
+      <p class="text-sm font-bold uppercase tracking-widest text-brandRed mt-4 md:mt-0">Standard de Sécurité Allemand & Français</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="group">
+        <div class="bg-gray-100 overflow-hidden mb-6 aspect-video">
+          <img alt="Volkswagen Golf Auto-école" class="w-full h-full object-cover black-and-white-img" src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80&w=1200"/>
+        </div>
+        <div class="flex justify-between items-start border-t border-brandBlack pt-4">
+          <div>
+            <h4 class="font-black text-2xl uppercase">VW Golf 8 </h4>
+            <p class="text-gray-500 text-sm">Boîte manuelle et automatique. Double commande intégrée.</p>
+          </div>
+          <span class="font-mono text-xs font-bold">2024</span>
+        </div>
+      </div>
+      
+      <div class="group">
+        <div class="bg-gray-100 overflow-hidden mb-6 aspect-video">
+          <img alt="Fiat 500 Auto-école" class="w-full h-full object-cover black-and-white-img" src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=1200"/>
+        </div>
+        <div class="flex justify-between items-start border-t border-brandBlack pt-4">
+          <div>
+            <h4 class="font-black text-2xl uppercase">Fiat 500</h4>
+            <p class="text-gray-500 text-sm">Polyvalence urbaine ultime. Maniabilité et capteurs de sécurité.</p>
+          </div>
+          <span class="font-mono text-xs font-bold">2025</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="max-w-7xl mx-auto px-6 py-24 border-t-2 border-brandBlack" id="equipe">
+  <h2 class="text-4xl md:text-6xl font-black mb-16 accent-dot">Les Instructeurs</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl">
+    <div class="group">
+      <div class="aspect-[3/4] bg-gray-100 mb-4 overflow-hidden">
+        <img alt="Moniteur Jean K." class="w-full h-full object-cover black-and-white-img" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=800"/>
+      </div>
+      <h4 class="font-black text-xl uppercase">Jean K.</h4>
+      <p class="text-brandRed font-bold text-xs tracking-tighter uppercase">Spécialiste Permis B</p>
+    </div>
+    <div class="group">
+      <div class="aspect-[3/4] bg-gray-100 mb-4 overflow-hidden">
+        <img alt="Monitrice Sara L." class="w-full h-full object-cover black-and-white-img" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=800"/>
+      </div>
+      <h4 class="font-black text-xl uppercase">Sara L.</h4>
+      <p class="text-brandRed font-bold text-xs tracking-tighter uppercase">Coach Post-Permis</p>
+    </div>
+  </div>
+</section>
+
+<section class="bg-brandBlack text-brandWhite py-24" id="tech">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="swiss-grid items-center">
+      <div class="col-span-12 md:col-span-6">
+        <h2 class="text-4xl md:text-6xl font-black mb-8 accent-dot">Suivi Digital</h2>
+        <p class="text-lg opacity-80 mb-12">Oubliez la paperasse. Notre app Maestro permet de suivre chaque compétence acquise, de réserver vos heures et de consulter les rapports de vos moniteurs en temps réel.</p>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="border border-white p-4">
+            <h4 class="font-bold text-brandRed mb-2">01. LIVRET</h4>
+            <p class="text-xs">Progression 100% numérisée.</p>
+          </div>
+          <div class="border border-white p-4">
+            <h4 class="font-bold text-brandRed mb-2">02. PLANNING</h4>
+            <p class="text-xs">Réservation instantanée via App.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-12 md:col-span-6 mt-12 md:mt-0">
+        <div class="bg-brandWhite p-2">
+           <img alt="Interface application mobile" class="w-full black-and-white-img" src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-24" id="offres">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-4xl md:text-6xl font-black mb-16 accent-dot">Tarification</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-0 border border-brandBlack bg-brandBlack">
+      <div class="bg-brandWhite text-brandBlack p-12 flex flex-col justify-between min-h-[450px]">
+        <div>
+          <span class="text-brandRed font-black text-lg">PERMIS B</span>
+          <h3 class="text-4xl font-black mt-4 mb-6 tracking-tighter">ESSENTIEL</h3>
+          <ul class="text-xs font-bold uppercase space-y-4 mb-8">
+            <li class="border-b border-gray-200 pb-2">20 Heures de conduite</li>
+            <li class="border-b border-gray-200 pb-2">Code en ligne illimité</li>
+            <li class="border-b border-gray-200 pb-2">Livret pédagogique digital</li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-3xl font-black mb-6">1290 €</p>
+          <button class="w-full bg-brandBlack text-brandWhite py-4 font-bold uppercase tracking-widest hover:bg-brandRed transition-all">S'inscrire</button>
+        </div>
+      </div>
+      <div class="bg-brandWhite text-brandBlack p-12 flex flex-col justify-between min-h-[450px] border-y md:border-y-0 md:border-x border-brandBlack">
+        <div>
+          <span class="text-brandRed font-black text-lg">AAC</span>
+          <h3 class="text-4xl font-black mt-4 mb-6 tracking-tighter">CONDUITE ACCOMPAGNÉE</h3>
+          <ul class="text-xs font-bold uppercase space-y-4 mb-8">
+            <li class="border-b border-gray-200 pb-2">Formation dès 15 ans</li>
+            <li class="border-b border-gray-200 pb-2">Rendez-vous pédagogiques</li>
+            <li class="border-b border-gray-200 pb-2">Accompagnement examen</li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-3xl font-black mb-6">1450 €</p>
+          <button class="w-full bg-brandBlack text-brandWhite py-4 font-bold uppercase tracking-widest hover:bg-brandRed transition-all">S'inscrire</button>
+        </div>
+      </div>
+      <div class="bg-brandWhite text-brandBlack p-12 flex flex-col justify-between min-h-[450px]">
+        <div>
+          <span class="text-brandRed font-black text-lg">EXPRESS</span>
+          <h3 class="text-4xl font-black mt-4 mb-6 tracking-tighter">STAGE ACCÉLÉRÉ</h3>
+          <ul class="text-xs font-bold uppercase space-y-4 mb-8">
+            <li class="border-b border-gray-200 pb-2">Permis en 30 jours</li>
+            <li class="border-b border-gray-200 pb-2">Planning prioritaire</li>
+            <li class="border-b border-gray-200 pb-2">Évaluation de départ offerte</li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-3xl font-black mb-6">1890 €</p>
+          <button class="w-full bg-brandBlack text-brandWhite py-4 font-bold uppercase tracking-widest hover:bg-brandRed transition-all">S'inscrire</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-brandBlack text-brandWhite pt-24 pb-12">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="swiss-grid mb-24">
+      <div class="col-span-12 md:col-span-4">
+        <h2 class="text-6xl md:text-8xl font-black mb-12 md:mb-0 leading-none uppercase">Prendre<br/>La route<span class="text-brandRed">.</span></h2>
+      </div>
+      
+      <div class="col-span-12 md:col-span-8 flex flex-col justify-end">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 border-t border-gray-800 pt-8">
+          <div>
+            <p class="font-bold uppercase text-brandRed text-xs mb-4">Adresse</p>
+            <p class="text-sm leading-relaxed">Avenue de la Précision 24<br/>75011 Paris<br/>France</p>
+          </div>
+          <div>
+            <p class="font-bold uppercase text-brandRed text-xs mb-4">Contact</p>
+            <p class="text-sm leading-relaxed">+33 1 23 45 67 89<br/>hello@drive-academy.fr</p>
+          </div>
+          <div>
+            <p class="font-bold uppercase text-brandRed text-xs mb-4">Horaires</p>
+            <p class="text-sm leading-relaxed">
+              Lun - Ven : 08h00 - 19h00<br/>
+              Samedi : 09h00 - 14h00<br/>
+              Dimanche : <span class="text-brandRed font-bold">Fermé</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="flex flex-col md:flex-row justify-between items-center border-t border-gray-800 pt-8 text-[10px] font-bold uppercase tracking-[0.2em] gap-4">
+      <p>© 2026 DRIVE ACADEMY INTERNATIONAL</p>
+      <p>EST. 2024 - AGRÉMENT N°75001</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
